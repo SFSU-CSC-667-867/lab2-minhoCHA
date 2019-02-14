@@ -12,7 +12,7 @@ app.get('/hello', (req, res) => {
 
 app.get('/network', (req, res) => {
     axios.get('http://localhost:3001/world')
-    .then((res) => {
+    .then((networkResponse) => {
         res.send(networkResponse.data);
     }) // if it doesn't work
     .catch(() => {
